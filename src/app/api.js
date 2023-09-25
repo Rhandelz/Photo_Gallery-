@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setToken } from "../features/auth/auth";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:3500", //Base URL which is our backend server
+  baseUrl: "https://photo_gallery-api.onrender.com", //Base URL which is our backend server
   credentials: "include", // require since we sending our cookies from our backend to our headers
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token;
