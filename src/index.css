@@ -1,0 +1,1578 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oleo+Script:wght@400;700&family=Oswald:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+}
+
+/* LOGIN Page css */
+.login_main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-height: 650px;
+}
+
+/* Lef Side Contain LogIn Profile */
+.left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* LogIn Profile */
+.left > img {
+  width: 80%;
+}
+
+/* Right Side Contain LogIn Form */
+.right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*  border: 1px solid black; */
+}
+
+/* App Name */
+.right > h1 {
+  font-size: 2.5em;
+  font-family: "Oleo Script", sans-serif;
+  letter-spacing: 0.02em;
+  background: linear-gradient(93.55deg, #342a45 47.08%, #280f8d 104.79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Main Form */
+.login_form {
+  height: 50%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+.login_form > div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5em;
+}
+
+.login_form > div > span {
+  width: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* For Showing Password */
+.eye_icon {
+  position: absolute;
+  color: gray;
+  font-size: 1.2em;
+  right: 10px;
+  transition: 0.2s;
+  padding: 3px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.eye_icon:hover {
+  background: rgba(214, 214, 214, 0.598);
+}
+
+.login_form > div > span > input {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 7px;
+  outline: none;
+  color: gray;
+  font-size: 0.8em;
+  caret-color: #7426c1;
+  transition: 0.5s;
+}
+
+.login_form > div > span > input:focus {
+  outline: 1px solid #7426c1;
+}
+
+/*Putting little animation to our login button */
+.login_form > button {
+  padding: 10px 15%;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1em;
+  border: none;
+  background: linear-gradient(92.73deg, #7426c1 11.58%, #3c26c1 92.75%);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form > button::after {
+  content: ">";
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateX(-500px);
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(60, 0, 255);
+  transition: 0.5s;
+}
+.login_form > button > p {
+  transform: translateX(0px);
+  transition: 0.5s;
+}
+
+.login_form > button:hover > p {
+  transform: translateX(1000px);
+}
+.login_form > button:hover:after {
+  transform: translateX(0px);
+}
+
+/*Navigaion to /register page*/
+.to_sign {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+/*REGISER MAINFORM*/
+.register_main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  min-height: 650px;
+}
+
+/*Main div conaining the title and the form*/
+.register_div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+/*Title*/
+.register_div > h1 {
+  font-size: 2.5em;
+  font-family: "Oleo Script", sans-serif;
+  letter-spacing: 0.02em;
+  background: linear-gradient(93.55deg, #342a45 47.08%, #280f8d 104.79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/*Discription*/
+.register_div > p {
+  font-family: "Oleo Script";
+  font-size: 1.2em;
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*Main Form for our register*/
+.register_form {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22%;
+}
+
+/*Div covering the input*/
+.register_form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  gap: 1.5em;
+}
+
+.register_form > div > span {
+  width: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: 0.5s;
+}
+
+/*Form input*/
+.register_form > div > span > input {
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 7px;
+  outline: none;
+  color: gray;
+  font-size: 0.8em;
+  caret-color: #7426c1;
+  transition: 0.5s;
+}
+
+.register_form > div > span > input:focus {
+  outline: 1px solid #7426c1;
+}
+
+/*? THE SHOW PASSWORD BUTTON IS IN THE SAME CSS AS THE LOGIN SHOW PASSWORD DOES */
+
+/*Putting little animation to our login button */
+.register_form > button {
+  padding: 10px 10%;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1em;
+  border: none;
+  background: linear-gradient(92.73deg, #7426c1 11.58%, #3c26c1 92.75%);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register_form > button::after {
+  content: ">";
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: translateX(-500px);
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgb(60, 0, 255);
+  transition: 0.5s;
+}
+.register_form > button > p {
+  transform: translateX(0px);
+  transition: 0.5s;
+}
+
+.register_form > button:hover > p {
+  transform: translateX(1000px);
+}
+.register_form > button:hover:after {
+  transform: translateX(0px);
+}
+
+/*Navigaion CSS*/
+.nav_main {
+  height: 100%;
+  width: 7%;
+  /*   border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.5s;
+  transform: translateX(0px);
+  z-index: 999;
+  background-color: white;
+  min-height: 200px;
+}
+
+/*Upper part of nav for Profile*/
+.profile_up {
+  width: 100%;
+  height: 15%;
+  /*   background-color: #3c26c1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_up > div {
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.115);
+  border-radius: 100px;
+}
+
+.profile_up > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Bottom part of nav containing Nav Button*/
+.nav_bottom {
+  display: flex;
+  height: 80%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav_bottom > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  height: 50%;
+}
+
+.nav_bottom > div > .a {
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.nav_bottom > div > .a > h2 {
+  font-size: 0.8em;
+  color: rgb(0, 0, 0);
+  font-family: "Oswal", sans-serif;
+  text-decoration: dotted;
+  display: none;
+}
+
+.nav_bottom > div > .a:hover {
+  background-color: #bababa4d;
+}
+
+.nav_main > button {
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: black;
+  top: 2%;
+  right: -30px;
+  display: none;
+  z-index: 4;
+  transition: 0.2s;
+}
+
+.foot_btn {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot_btn > button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2em;
+}
+
+/* Main Feed of Photo CSS*/
+
+.feed {
+  width: 93%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.feed_title {
+  width: 100%;
+  background-clip: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 10%;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+}
+
+.feed_title > h1 {
+  font-size: 2.5em;
+  font-family: "Oleo Script", sans-serif;
+  letter-spacing: 0.02em;
+  background: linear-gradient(93.55deg, #342a45 47.08%, #280f8d 104.79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.main_container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-x: hidden;
+}
+.main_container::-webkit-scrollbar {
+  display: none;
+}
+
+/*Photo container */
+.photo_main {
+  width: 100%;
+  column-count: 4;
+  column-width: 33%;
+  padding: 7.5rem 2rem;
+  /* overflow-y: hidden; */
+}
+
+.photo_main > div {
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.photo_main > div > img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.photo_main > div:hover > img {
+  filter: brightness(40%);
+}
+
+.photo_main > div:hover > .post_info {
+  opacity: 1;
+}
+
+.post_info {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  padding-left: 10px;
+  width: 100%;
+  color: white;
+  opacity: 0;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.post_info > .link {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.post_info > p {
+  margin-top: 10px;
+  color: gray;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.7em;
+}
+
+/*Single Post Css*/
+
+.single_post {
+  width: 93%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+}
+
+.upper {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.dp_info {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+}
+
+.img_container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_container > div {
+  height: 180px;
+  width: 180px;
+  text-align: center;
+  border-radius: 100px;
+  overflow: hidden;
+  border: 1px solid rgba(128, 128, 128, 0.196);
+}
+
+.img_container > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main_info {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_info > span:nth-child(1) {
+  height: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-family: "Roboto", sans-serif;
+  gap: 10px;
+}
+
+.main_info > span:nth-child(1) > h1 {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.main_info > span:nth-child(1) > p {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: rgb(114, 114, 114);
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.main_info > span:nth-child(2) {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+hr {
+  width: 90%;
+}
+
+.main_info > span:nth-child(2) > h3 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+}
+
+.lower {
+  width: 90%;
+  height: 60%;
+}
+
+.lower > nav {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: end;
+  padding: 10px;
+}
+
+.lower > nav > span {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 5px solid #180076;
+  color: #180076;
+}
+
+.user_post {
+  height: 80%;
+
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.no_post {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no_post > h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+}
+
+.user_post::-webkit-scrollbar {
+  display: none;
+}
+
+.user_photo {
+  width: 100%;
+
+  column-count: 4;
+  column-width: 33%;
+  padding: 1.5rem 10px;
+  /* overflow-y: hidden; */
+}
+
+.user_photo > div {
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.user_photo > div > img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+/*Add Post Css*/
+
+.add_main {
+  width: 93%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_main > h1 {
+  font-size: 2.5em;
+  font-family: "Oleo Script", sans-serif;
+  letter-spacing: 0.02em;
+  background: linear-gradient(93.55deg, #342a45 47.08%, #280f8d 104.79%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name_but {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 8%;
+}
+
+.name_but > h3 {
+  font-size: 1.7em;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.name_but > button {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  padding: 10px 4%;
+  background: linear-gradient(92.73deg, #7426c1 11.58%, #3c26c1 92.75%);
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.add_main > form {
+  height: 80%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add_main > form > input {
+  width: 90%;
+  height: 10%;
+  font-size: 1em;
+  font-weight: bold;
+  color: gray;
+  padding-left: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.img_select {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+.img_select > button {
+  padding: 5px 10px;
+  border-radius: 100px;
+  border: none;
+  color: red;
+  font-weight: bold;
+  font-size: 1.5em;
+  position: absolute;
+  right: 5%;
+  top: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.img_select > button:hover {
+  background-color: rgb(194, 194, 194);
+}
+
+.img_select > span {
+  font-size: 4em;
+  color: gray;
+}
+.img_select > h3 {
+  font-size: 1.3em;
+  color: gray;
+  margin-bottom: 1em;
+}
+
+.photo {
+  height: 90%;
+  width: 50%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.photo > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.file {
+  background-color: #1d75e8;
+  border-radius: 7px;
+  padding: 10px 4%;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.file > input {
+  display: none;
+}
+
+.add_loader {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add_loader > h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #180076;
+}
+
+.add_success {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add_success > h1 {
+  font-size: 80px;
+  color: green;
+}
+.add_success > h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  color: green;
+  margin-bottom: 10px;
+}
+
+.add_success > .view {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+/*Search Css*/
+
+.main_search {
+  width: 93%;
+  height: 100%;
+}
+
+.srch_div {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.srch_div > span {
+  height: 25%;
+  width: 50%;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 200px;
+}
+
+.srch_div > span > input {
+  height: 100%;
+  width: 95%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-left: 20px;
+}
+
+.srch_div > span > label {
+  font-size: 1.5em;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  padding: 5px;
+  min-width: 30px;
+}
+
+.srch_list {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  /*  justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+  padding-top: 2em;
+  /*   gap: 25px; */
+}
+
+.user_result {
+  width: 50%;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+  border-radius: 5px;
+  /*   box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.122); */
+  border-bottom: 1px solid gray;
+}
+
+.user_result > span {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.user_result > span > h2 {
+  font-size: 1em;
+}
+
+.user_result > span > div {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.user_result > span > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.go_to {
+  width: 10%;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.srch_blank {
+  color: gray;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.srch_blank > h1 {
+  font-size: 6em;
+}
+.srch_blank > h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* PERSONAL PAGE CSS */
+
+.img_container_me {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_container_me > div {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  border-radius: 100px;
+  border: 1px solid rgba(128, 128, 128, 0.186);
+}
+
+.img_container_me > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main_info_me {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main_info_me > span:nth-child(1) {
+  height: 50%;
+
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-family: "Roboto", sans-serif;
+  gap: 10px;
+}
+
+.main_info_me > span:nth-child(1) > span > button {
+  display: inline;
+  font-size: 1.5em;
+  border: none;
+  background-color: transparent;
+}
+
+.main_info_me > span:nth-child(1) > span > h1 {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.main_info_me > span:nth-child(1) > p {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: rgb(114, 114, 114);
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.main_info_me > span:nth-child(1) > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main_info_me > span:nth-child(2) {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+hr {
+  width: 90%;
+}
+
+.main_info_me > span:nth-child(2) > h3 {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+}
+
+.user_photo > .personal_img {
+  position: relative;
+  transition: 0.2s;
+}
+
+.user_photo > .personal_img:hover > img {
+  filter: brightness(50%);
+}
+
+.user_photo > .personal_img:hover > .delete {
+  opacity: 1;
+}
+
+.delete {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  font-size: 2em;
+  color: rgb(255, 0, 0);
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 555;
+  transition: 0.2s;
+}
+
+/*Edi Info Css*/
+
+.edit_info {
+  width: 93%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editForm_info {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile_info {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_info > div {
+  height: 300px;
+  width: 300px;
+  border-radius: 500px;
+  overflow: hidden;
+  transition: 0.5s;
+  border: 1px solid rgba(128, 128, 128, 0.29);
+  position: relative;
+}
+
+.profile_info > div:hover > label {
+  opacity: 1;
+}
+
+.profile_info > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.profile_info > div > input {
+  display: none;
+}
+
+.profile_info > div > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000071;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.info_value {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.info_value > h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: gray;
+}
+
+.info_value > span {
+  border-bottom: 1px solid black;
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  min-width: 400px;
+}
+
+.info_value > span:nth-child(3) {
+  height: 15%;
+}
+
+.info_value > span:nth-child(1) > h1 {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.info_value > span:nth-child(1) > input {
+  width: 90%;
+  font-size: 1.8em;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+}
+
+.info_value > span:nth-child(3) > textarea {
+  width: 100%;
+  padding: 0px 100px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+  resize: none;
+  text-align: center;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.submit_edit {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 7px 60px;
+  margin-bottom: 30px;
+  border: none;
+  color: white;
+  background: linear-gradient(92.73deg, #7426c1 11.58%, #3c26c1 92.75%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*Log Out Modal*/
+
+.modal_logout {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.611);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_logout > div {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.modal_logout > div > .a,
+.modal_logout > div > .a2 {
+  border: 1px solid rgba(128, 128, 128, 0.29);
+  font-size: 1.2em;
+  padding: 15px 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: #999999;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.modal_logout > div > .a:hover,
+.modal_logout > div > .a2:hover {
+  background-color: gray;
+}
+
+.modal_logout > div > .a:nth-child(2) {
+  color: rgb(255, 80, 80);
+}
+
+/*ACCOUNT CSS*/
+.user_acc {
+  height: 100%;
+  width: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user_acc > h1 {
+  font-size: 2.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+}
+
+.main_acc {
+  height: 250px;
+  width: 600px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.main_acc > span {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+}
+.main_acc > span > .icon {
+  font-size: 1.5em;
+}
+
+.main_acc > span > h1 {
+  font-size: 1.7em;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1.2px;
+}
+
+/*Dynamic Media Query*/
+@media (max-width: 800px) {
+  .right {
+    width: 100%;
+  }
+  .left {
+    display: none;
+  }
+
+  .register_div {
+    width: 100%;
+  }
+
+  .register_form > div > span {
+    width: 90%;
+  }
+  .nav_main {
+    left: 0px;
+  }
+
+  .photo_main,
+  .user_photo {
+    column-count: 3;
+  }
+
+  .dp_info {
+    width: 100%;
+  }
+
+  .img_container > div {
+    height: 150px;
+    width: 150px;
+  }
+
+  .photo {
+    width: 90%;
+  }
+
+  .img_select > button {
+    right: 7%;
+    top: 7%;
+  }
+
+  .srch_div > span {
+    width: 80%;
+  }
+
+  .srch_blank > h1 {
+    font-size: 5em;
+  }
+
+  .srch_blank > h4 {
+    font-size: 1.5em;
+  }
+
+  .user_result {
+    width: 80%;
+  }
+
+  .user_result > span > div {
+    height: 50px;
+    width: 50px;
+  }
+  .user_result > span > h2 {
+    font-size: 1em;
+  }
+
+  .profile_info > div {
+    height: 200px;
+    width: 200px;
+  }
+
+  .info_value > span:nth-child(1) > input {
+    font-size: 1.5em;
+  }
+
+  .info_value > h1 {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 510px) {
+  .nav_main {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 500px) {
+  .login_form > div > span {
+    width: 85%;
+  }
+  .login_form > button {
+    padding: 10px 35%;
+  }
+
+  .register_form > div {
+    width: 100%;
+  }
+
+  .register_form > div > span {
+    width: 85%;
+  }
+
+  .register_form > button {
+    padding: 10px 35%;
+  }
+
+  /* todo " NAV " >>  INCASE OF UI ERRO HERE ENDPOINT WHERE U CAN CHANGE */
+  .nav_main {
+    width: 120px;
+    transform: translateX(-120px);
+    position: fixed;
+  }
+
+  .nav_bottom > div > .a > h2 {
+    display: block;
+  }
+  .nav_main > button {
+    display: block;
+  }
+
+  .foot_btn > button {
+    transform: rotate(90deg);
+  }
+
+  .feed {
+    width: 100%;
+  }
+
+  .photo_main,
+  .user_photo {
+    column-count: 2;
+  }
+
+  .main_info > span:nth-child(1) > h1 {
+    font-size: 1.2em;
+  }
+
+  .main_info > span:nth-child(1) > p {
+    font-size: 0.7em;
+  }
+
+  .main_info > span:nth-child(2) > h3 {
+    font-size: 0.8em;
+  }
+
+  .lower > nav > span > h2 {
+    font-size: 1em;
+  }
+  .img_container > div {
+    height: 120px;
+    width: 120px;
+  }
+
+  .add_main {
+    width: 100%;
+  }
+
+  .name_but > button {
+    padding: 10px 2em;
+  }
+  .name_but > h3 {
+    font-size: 1.2em;
+  }
+  .photo {
+    height: 70%;
+  }
+
+  .main_search {
+    width: 100%;
+  }
+
+  .user_result {
+    width: 100%;
+  }
+
+  .user_result > span > div {
+    height: 50px;
+    width: 50px;
+  }
+  .user_result > span > h2 {
+    font-size: 1em;
+  }
+
+  .srch_div > span {
+    width: 90%;
+  }
+
+  .srch_blank > h1 {
+    font-size: 4em;
+  }
+
+  .srch_blank > h4 {
+    font-size: 1.2em;
+  }
+
+  .main_info_me > span:nth-child(1) > span > button {
+    font-size: 1em;
+  }
+
+  .edit_info {
+    width: 100%;
+  }
+
+  .info_value > span:nth-child(1) > h1 {
+    display: none;
+  }
+
+  .info_value > span:nth-child(1) > input {
+    width: 100%;
+  }
+
+  .info_value > span {
+    min-width: none;
+    border: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .photo {
+    height: 50%;
+  }
+}
