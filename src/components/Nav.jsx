@@ -1,14 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faImage,
-  faSearch,
-  faCircleUser,
-  faBars,
-  faEllipsisVertical,
-} from "@fortawesome/free-solid-svg-icons";
 import defaultDP from "../assets/no-dp.jpg";
 import useAuth from "../hooks/useAuth";
 import { useSelector } from "react-redux";
@@ -38,30 +29,30 @@ const Nav = ({ setShow }) => {
   return (
     <nav className="nav_main" ref={navRef}>
       <button onClick={show} ref={navBtn}>
-        <FontAwesomeIcon icon={faBars} />
+        <i class="bi bi-list"></i>
       </button>
       <div className="profile_up">
         <div>
-          <img src={user.profile || defaultDP} alt="" />
+          <img src={user?.profile || defaultDP} alt="" />
         </div>
       </div>
 
       <div className="nav_bottom" style={{}}>
         <div>
           <NavLink to="/" className="a">
-            <FontAwesomeIcon icon={faHouse} />
+            <i class="bi bi-house-fill"></i>
             <h2>Home</h2>
           </NavLink>
           <NavLink to="/addpost" className="a">
-            <FontAwesomeIcon icon={faImage} />
+            <i class="bi bi-image-fill"></i>
             <h2>Gallery</h2>
           </NavLink>
           <NavLink to="/search" className="a">
-            <FontAwesomeIcon icon={faSearch} />
+            <i class="bi bi-search"></i>
             <h2>Search</h2>
           </NavLink>
           <NavLink to="/personal" className="a">
-            <FontAwesomeIcon icon={faCircleUser} />
+            <i class="bi bi-person-circle"></i>
             <h2>Profile</h2>
           </NavLink>{" "}
         </div>
@@ -69,7 +60,7 @@ const Nav = ({ setShow }) => {
 
       <div className="foot_btn">
         <button onClick={() => setShow(true)}>
-          <FontAwesomeIcon icon={faEllipsisVertical} />
+          <i class="bi bi-three-dots-vertical"></i>
         </button>
       </div>
     </nav>

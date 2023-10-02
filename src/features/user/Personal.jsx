@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import defaultImg from "../../assets/no-dp.jpg";
 import { Outlet, useParams } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGear, faImage, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { selectAllPost } from "../post/postApiSlice";
 import { selectUserById } from "./userApiSlice";
@@ -72,7 +70,7 @@ const Personal = () => {
             delelePost(post.name, post.id);
           }}
         >
-          <FontAwesomeIcon icon={faTrash} />
+          <i class="bi bi-trash3-fill"></i>
         </button>
         <img src={post.photoUrl} alt="" />
       </div>
@@ -98,7 +96,7 @@ const Personal = () => {
                 <h1>{user.name}</h1>
 
                 <button onClick={() => setShow(true)}>
-                  <FontAwesomeIcon icon={faGear} />
+                  <i class="bi bi-gear-fill"></i>
                 </button>
               </span>
 
@@ -128,7 +126,7 @@ const Personal = () => {
           <nav>
             <span>
               <h2>Gallery</h2>
-              <FontAwesomeIcon icon={faImage} />
+              <i class="bi bi-image-fill"></i>
             </span>
           </nav>
 

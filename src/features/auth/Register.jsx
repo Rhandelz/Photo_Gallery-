@@ -48,9 +48,9 @@ const Register = () => {
 
   const showPass = () => {
     visible.current = !visible.current;
-    shotButton.current.textContent = visible.current
-      ? "visibility"
-      : "visibility_off";
+    shotButton.current.className = visible.current
+      ? "bi bi-eye eye_icon"
+      : "bi bi-eye-slash eye_icon";
 
     passType.current.type = visible.current ? "text" : "password";
   };
@@ -121,13 +121,11 @@ const Register = () => {
                   name="password"
                   onChange={(e) => handleSubmit(e)}
                 />
-                <span
+                <i
                   ref={shotButton}
-                  className="eye_icon material-symbols-outlined"
+                  className="bi bi-eye-slash eye_icon"
                   onClick={showPass}
-                >
-                  visibility_off
-                </span>
+                ></i>
               </span>
             </div>
 

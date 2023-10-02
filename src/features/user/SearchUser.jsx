@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { selectAllUser } from "./userApiSlice";
 import { useSelector } from "react-redux";
 import UserResult from "./UserResult";
@@ -19,7 +17,7 @@ const SearchUser = () => {
       <div className="srch_div">
         <span>
           <label htmlFor="src">
-            <FontAwesomeIcon icon={faSearch} />
+            <i class="bi bi-search"></i>
           </label>
           <input
             type="text"
@@ -37,7 +35,7 @@ const SearchUser = () => {
         ) : (
           <div className="srch_blank">
             <h1>
-              <FontAwesomeIcon icon={faSearch} />
+              <i class="bi bi-search"></i>
             </h1>
             <h4>No User Display , Search for user</h4>
           </div>

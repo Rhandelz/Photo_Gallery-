@@ -1,5 +1,3 @@
-import { faImage, faX, faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { useAddpostMutation } from "./postApiSlice";
@@ -146,7 +144,7 @@ const AddPost = () => {
           {img ? (
             <>
               <button onClick={remove}>
-                <FontAwesomeIcon icon={faX} />
+                <i class="bi bi-x-circle"></i>
               </button>
               <div className="photo">
                 <img src={URL.createObjectURL(img)} />
@@ -155,7 +153,7 @@ const AddPost = () => {
           ) : (
             <>
               <span>
-                <FontAwesomeIcon icon={faImage} />{" "}
+                <i class="bi bi-image"></i>{" "}
               </span>
               <h3>Select your image from your Device</h3>
               <label htmlFor="file" className="file">
@@ -183,7 +181,7 @@ const AddPost = () => {
     content = (
       <div className="add_success">
         <h1>
-          <FontAwesomeIcon icon={faCircleCheck} />
+          <i class="bi bi-check-circle-fill"></i>
         </h1>
         <h2>Post Sucess</h2>
 

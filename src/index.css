@@ -382,12 +382,13 @@ body {
   color: black;
   padding: 5px;
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1.4em;
   transition: 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  font-weight: bold;
   gap: 8px;
   text-decoration: none;
 }
@@ -647,6 +648,10 @@ hr {
   gap: 10px;
   border-bottom: 5px solid #180076;
   color: #180076;
+}
+
+.lower > nav > span > i {
+  font-size: 1.2em;
 }
 
 .user_post {
@@ -1431,6 +1436,18 @@ hr {
 
   .info_value > h1 {
     font-size: 1em;
+  }
+
+  .user_acc {
+    width: 100%;
+  }
+
+  .main_acc {
+    width: 100%;
+  }
+
+  .user_acc > h1 {
+    font-size: 1.5em;
   }
 }
 

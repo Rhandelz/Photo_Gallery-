@@ -1,8 +1,6 @@
 import React from "react";
 import defaultImg from "../../assets/no-dp.jpg";
 import { Outlet, useParams } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faImage } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 import { selectAllPost } from "../post/postApiSlice";
 import { selectUserById } from "./userApiSlice";
@@ -81,7 +79,7 @@ const UserPost = () => {
         <nav>
           <span>
             <h2>Gallery</h2>
-            <FontAwesomeIcon icon={faImage} />
+            <i class="bi bi-image-fill"></i>
           </span>
         </nav>
 

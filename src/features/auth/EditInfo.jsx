@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
 import defaultImg from "../../assets/no-dp.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faImage,
-  faPencil,
-  faCalendar,
-} from "@fortawesome/free-solid-svg-icons";
 import useAuth from "../../hooks/useAuth";
 import { useSelector } from "react-redux";
 import { selectUserById } from "../user/userApiSlice";
@@ -143,7 +137,7 @@ const EditInfo = () => {
           <div className="profile_info">
             <div>
               <label htmlFor="dp">
-                <FontAwesomeIcon icon={faImage} />
+                <i class="bi bi-image"></i>
               </label>
 
               <input type="file" id="dp" onChange={(e) => addimg(e)} />
@@ -155,7 +149,7 @@ const EditInfo = () => {
           <div className="info_value">
             <span>
               <h1>
-                <FontAwesomeIcon icon={faPencil} />
+                <i class="bi bi-pencil-fill"></i>
               </h1>
               <input
                 type="text"
@@ -168,7 +162,7 @@ const EditInfo = () => {
             </span>
 
             <h1>
-              <FontAwesomeIcon icon={faCalendar} />
+              <i class="bi bi-calendar-event-fill"></i>
               {"    "}
               Joined July 10 2003
             </h1>
