@@ -69,7 +69,7 @@ const Register = () => {
   //ERROR HANDLER
   useEffect(() => {
     if (isError) {
-      toast.error(error.data.message.toString());
+      toast.error(error?.data?.message.toString());
       console.log(error.data);
     }
   }, [isError]);
